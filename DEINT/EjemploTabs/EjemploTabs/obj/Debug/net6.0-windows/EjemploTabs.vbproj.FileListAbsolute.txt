@@ -1,0 +1,17 @@
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\bin\Debug\net6.0-windows\EjemploTabs.exe
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\bin\Debug\net6.0-windows\EjemploTabs.deps.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\bin\Debug\net6.0-windows\EjemploTabs.runtimeconfig.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\bin\Debug\net6.0-windows\EjemploTabs.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\bin\Debug\net6.0-windows\EjemploTabs.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.vbproj.AssemblyReference.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.Form1.resources
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.vbproj.GenerateResource.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.AssemblyInfoInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.AssemblyInfo.vb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.vbproj.CoreCompileInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\refint\EjemploTabs.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\EjemploTabs.genruntimeconfig.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\EjemploTabs\EjemploTabs\obj\Debug\net6.0-windows\ref\EjemploTabs.dll

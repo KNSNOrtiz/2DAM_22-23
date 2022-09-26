@@ -1,0 +1,17 @@
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\bin\Debug\net6.0-windows\MoverElementos.exe
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\bin\Debug\net6.0-windows\MoverElementos.deps.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\bin\Debug\net6.0-windows\MoverElementos.runtimeconfig.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\bin\Debug\net6.0-windows\MoverElementos.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\bin\Debug\net6.0-windows\MoverElementos.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.vbproj.AssemblyReference.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.Form1.resources
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.vbproj.GenerateResource.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.AssemblyInfoInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.AssemblyInfo.vb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.vbproj.CoreCompileInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\refint\MoverElementos.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\MoverElementos.genruntimeconfig.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\MoverElementos\MoverElementos\obj\Debug\net6.0-windows\ref\MoverElementos.dll
