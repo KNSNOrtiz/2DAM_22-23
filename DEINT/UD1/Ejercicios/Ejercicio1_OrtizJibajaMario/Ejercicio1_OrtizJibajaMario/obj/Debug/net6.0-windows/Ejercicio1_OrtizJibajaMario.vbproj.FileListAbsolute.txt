@@ -1,0 +1,17 @@
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\bin\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.exe
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\bin\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.deps.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\bin\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.runtimeconfig.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\bin\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\bin\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.vbproj.AssemblyReference.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.Form1.resources
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.vbproj.GenerateResource.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.AssemblyInfoInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.AssemblyInfo.vb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.vbproj.CoreCompileInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\refint\Ejercicio1_OrtizJibajaMario.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\Ejercicio1_OrtizJibajaMario.genruntimeconfig.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejercicios\Ejercicio1_OrtizJibajaMario\Ejercicio1_OrtizJibajaMario\obj\Debug\net6.0-windows\ref\Ejercicio1_OrtizJibajaMario.dll

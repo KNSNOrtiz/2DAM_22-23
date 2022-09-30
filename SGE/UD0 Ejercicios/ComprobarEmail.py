@@ -1,34 +1,42 @@
+from pickle import TRUE
+
+
 def Validar(correo):
-    contadorespacios = 0
-    contadorarroba =  0
-    for i in correo:
-        if(i == " "):
-            contadorespacios += 1
-            
-        if(i=="@"):
-            contadorarroba += 1
-            
-        if(i == "+") or (i=="-") or (i=="*") or (i=="?") or (i=="!"):
-            listainvalidos.append(correo)
-            return
-            
-            
-    if contadorespacios > 0 or contadorarroba > 1:
-        listainvalidos.append(correo)
-    else:
-        listavalidos.append(correo)
+    arroba = 0
+    correoAntesArroba = correo[0:correo.rfind('@')]
+    correoDespuesArroba = correo[correo.rfind('@'):len(correo)]
+    for i in correoAntesArroba:
+        if ord(i) in range(65,90) or ord(i) in range(97,122) or ord(i) in range(48,57) or i == '.' or i=='_':
+            pass
+        else:
+            return False
+    for i in correoDespuesArroba:
+        if ord(i) in range(65,90) or ord(i) in range(97,122) or ord(i) in range(48,57) or i == '.':
+            pass
+        else:
+            return False
+    return True
 
-email1 = "mar@io@gmail.com"
-email2 = "mario@gmail.com"
-email3 = "pepehola@outlook.es"
-email4="es temailno.stabien.@com"
-listacorreos = [email1,email2,email3,email4]
-listavalidos = []
-listainvalidos = []
-
-for i in range(0,len(listacorreos),+1):
-    Validar(listacorreos[i])
-
-print(listavalidos)
-print(listainvalidos)
+def emailpropart(email):
+    indice = email.index('@')
+    emailp = email[:indice]
+    
+    if len(emailp) == 0:
+        return False
+    if emailp[0]=='.' or emailp[indice-1]=='.':
+        return False
+    punto = False
+    for i in emailp:
+        if i=='.':
+            if punto:
+                return False
+            else:
+                punto=True
+        else:
+            punto=False
+    return True
+    
+email = input("Dame un email: ")
+print(Validar(email))
+#print(Validar(email))
 
