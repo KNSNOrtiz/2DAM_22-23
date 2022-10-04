@@ -9,8 +9,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.io.*;
 import javax.swing.JOptionPane;
 
@@ -18,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author akihi
  */
-public class AnadirAlumnos extends javax.swing.JFrame {
+public class AnadirAlumnos extends javax.swing.JDialog {
     ArrayList<Alumno> listaAlumnos = new ArrayList<>();
     File fileAlumnos = new File(".\\alumnos.dat");
 
@@ -53,7 +51,8 @@ public class AnadirAlumnos extends javax.swing.JFrame {
         txtFecha = new javax.swing.JTextField();
         btnAnadir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setModal(true);
 
         jLabel1.setText("Nº Expediente:");
 

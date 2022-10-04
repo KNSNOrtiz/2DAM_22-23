@@ -1,17 +1,21 @@
 
 package alumno;
 
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.print.ServiceUIFactory;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-class LeerAlumnos extends javax.swing.JFrame {
+class LeerAlumnos extends javax.swing.JFrame implements WindowListener {
     ArrayList<Alumno> listaAlumnos;
     DefaultTableModel tabla;
     File file = null;
@@ -20,6 +24,7 @@ class LeerAlumnos extends javax.swing.JFrame {
 
     public LeerAlumnos() {
         initComponents();
+        addWindowListener(this);
         this.setTitle("Ejercicio clase: Leer alumnos de un fichero.");
         
     }
@@ -35,6 +40,7 @@ class LeerAlumnos extends javax.swing.JFrame {
         btnCargar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblAlumnos = new javax.swing.JTable();
+        btnAltas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +72,13 @@ class LeerAlumnos extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblAlumnos);
 
+        btnAltas.setText("Alta");
+        btnAltas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAltasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -79,7 +92,9 @@ class LeerAlumnos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCargar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSeleccionar, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnAltas, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(139, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2))
@@ -91,7 +106,8 @@ class LeerAlumnos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtRuta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeleccionar))
+                    .addComponent(btnSeleccionar)
+                    .addComponent(btnAltas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCargar)
                 .addGap(18, 18, 18)
@@ -117,6 +133,7 @@ class LeerAlumnos extends javax.swing.JFrame {
     private void btnCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarActionPerformed
         try {
               tabla = (DefaultTableModel)tblAlumnos.getModel();
+              tabla.setRowCount(0);
               fis = new FileInputStream(file);
               ois = new ObjectInputStream(fis);            
               listaAlumnos = (ArrayList <Alumno>)ois.readObject();
@@ -128,16 +145,25 @@ class LeerAlumnos extends javax.swing.JFrame {
               }
           } catch (IOException | ClassNotFoundException e) {
                 JOptionPane.showMessageDialog(null, "No se puede leer el archivo o no hay un listado de alumnos.");
+          } catch (NullPointerException e){
+              JOptionPane.showMessageDialog(null, "Error: Tipo de dato necesario no encontrado.");
+              
           }
             finally{
                 try {
                     fis.close();
                      ois.close();
-                } catch (IOException ex) {
+                } catch (IOException | NullPointerException ex) {
                     
                 }
             }
     }//GEN-LAST:event_btnCargarActionPerformed
+
+    private void btnAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltasActionPerformed
+        JDialog winAltas = new AnadirAlumnos();
+        winAltas.setVisible(true);
+        
+    }//GEN-LAST:event_btnAltasActionPerformed
 
 
     public static void main(String args[]) {
@@ -173,6 +199,7 @@ class LeerAlumnos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAltas;
     private javax.swing.JButton btnCargar;
     private javax.swing.JButton btnSeleccionar;
     private javax.swing.JLabel jLabel1;
@@ -180,4 +207,37 @@ class LeerAlumnos extends javax.swing.JFrame {
     private javax.swing.JTable tblAlumnos;
     private javax.swing.JTextField txtRuta;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        JOptionPane.showMessageDialog(this, "Cerrando ventana...");
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+
+    }
 }
