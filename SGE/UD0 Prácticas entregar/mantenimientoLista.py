@@ -37,9 +37,10 @@ def Buscar(cod):
         if listaArticulos[i]["Cod_Articulo"] == cod:
             print("Artículo encontrado:\n")
             print(listaArticulos[i])
+            return i
         else:
             print("El artículo con código " + str(cod) + " no existe en la lista.\n")
-            break         
+            return -1       
          
 def Listar():
         contador = 0
@@ -77,9 +78,10 @@ while True:
             continue
         try:
             cod = input("Introduzca el código del artículo a modificar: ")
-            nom = input("Nombre: ")
-            desc = input("Descripción: ")
-            prec = input("Precio: ")
+            if Buscar(cod) != -1:
+                nom = input("Nombre: ")
+                desc = input("Descripción: ")
+                prec = input("Precio: ")
         except:
             print("Los datos no son válidos.")
             continue        

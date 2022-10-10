@@ -2,11 +2,16 @@ package mario.pruebas;
 
 public class Sumador {
     public int sumar(int n1, int n2){
-        int resultado=0;
-        for (int i=n1;i<=n2;i++){
-            resultado=resultado+i;
+        int suma=0;
+        if (n1>n2){
+            int aux=n1;
+            n1=n2;
+            n2=aux;
         }
-        return resultado;
+        for (int i=n1; i<=n2; i++){
+            suma=suma+i;
+        }
+        return suma;
     }
     public static void main(String[] args){
         Sumador s=new Sumador();
@@ -14,5 +19,6 @@ public class Sumador {
         int n2=Integer.parseInt(args[1]);
         int resultado=s.sumar(n1, n2);
         System.out.println(resultado);
+        System.out.flush();
     }
 }

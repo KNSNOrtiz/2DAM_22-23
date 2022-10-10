@@ -1,0 +1,17 @@
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\bin\Debug\net6.0-windows\Ejemplos checkbox.exe
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\bin\Debug\net6.0-windows\Ejemplos checkbox.deps.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\bin\Debug\net6.0-windows\Ejemplos checkbox.runtimeconfig.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\bin\Debug\net6.0-windows\Ejemplos checkbox.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\bin\Debug\net6.0-windows\Ejemplos checkbox.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.vbproj.AssemblyReference.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos_checkbox.Form1.resources
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.vbproj.GenerateResource.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.AssemblyInfoInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.AssemblyInfo.vb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.vbproj.CoreCompileInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\refint\Ejemplos checkbox.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\Ejemplos checkbox.genruntimeconfig.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\Ejemplos checkbox\Ejemplos checkbox\obj\Debug\net6.0-windows\ref\Ejemplos checkbox.dll
