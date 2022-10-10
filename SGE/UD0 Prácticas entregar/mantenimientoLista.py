@@ -23,15 +23,6 @@ def Baja(cod):
             print("El artículo con código " + str(cod) + " no existe en la lista.\n")
             break
 
-        
-def Modificar(cod:int, nom: str, desc: str, prec: float):
-    for i in range(len(listaArticulos)):
-        if listaArticulos[i]["Cod_Articulo"] == cod:
-            listaArticulos[i]["Nombre"] = nom
-            listaArticulos[i]["Descripción"] = desc
-            listaArticulos[i]["Precio"] = prec
-            print("\nEl artículo con código " + str(cod) + " ha sido modificado.\n")
-            break
 def Buscar(cod):
     for i in range(len(listaArticulos)):
         if listaArticulos[i]["Cod_Articulo"] == cod:
@@ -40,7 +31,13 @@ def Buscar(cod):
             return i
         else:
             print("El artículo con código " + str(cod) + " no existe en la lista.\n")
-            return -1       
+            return -1      
+               
+def Modificar(i: int, nom: str, desc: str, prec: float):
+    listaArticulos[i]["Nombre"] = nom
+    listaArticulos[i]["Descripción"] = desc
+    listaArticulos[i]["Precio"] = prec
+    print("\nEl artículo con código " + str(cod) + " ha sido modificado.\n")
          
 def Listar():
         contador = 0
@@ -78,14 +75,15 @@ while True:
             continue
         try:
             cod = input("Introduzca el código del artículo a modificar: ")
-            if Buscar(cod) != -1:
+            indiceLista = Buscar(cod)
+            if (indiceLista != -1):
                 nom = input("Nombre: ")
                 desc = input("Descripción: ")
                 prec = input("Precio: ")
+                Modificar(indiceLista, nom, desc, prec) 
         except:
             print("Los datos no son válidos.")
-            continue        
-        Modificar(cod, nom, desc, prec)      
+            continue                
     elif opcion == "4":
         if len(listaArticulos) == 0:
             print("La lista está vacía.\n")
