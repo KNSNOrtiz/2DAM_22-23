@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -154,6 +155,11 @@ public class frameMain extends javax.swing.JFrame {
         jMenuBar1.add(mitConsulta);
 
         mitModificar.setText("Modificar");
+        mitModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mitModificarMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(mitModificar);
 
         setJMenuBar(jMenuBar1);
@@ -248,6 +254,10 @@ public class frameMain extends javax.swing.JFrame {
     private void mitConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mitConsultaMouseClicked
         Consulta();
     }//GEN-LAST:event_mitConsultaMouseClicked
+
+    private void mitModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mitModificarMouseClicked
+        Modificar(Integer.valueOf(txtPos.getText()));
+    }//GEN-LAST:event_mitModificarMouseClicked
     
 
     /**
@@ -320,21 +330,17 @@ public class frameMain extends javax.swing.JFrame {
                 raf.seek(pos);
                 //  Leemos el identificador (siempre es un número entero)
                 if ((idRegistro = raf.readInt()) != 0) {
-                    char[] nombre = new char[100];
-                    char[] fecha = new char[10];
+                    byte[] nombreBytes = new byte[200];
+                    byte[] fechaBytes = new byte[20];
                     Double nota1 = 0.0;
                     Double nota2 = 0.0;
                     Double notaFin = 0.0;
-                    for (int j = 0; j < nombre.length; j++) {
-                        nombre[j] = raf.readChar();
-                    }
-                    for (int j = 0; j < fecha.length; j++) {
-                        fecha[j] = raf.readChar();
-                    }
+                    raf.readFully(nombreBytes);
+                    raf.readFully(fechaBytes);
                     nota1 = raf.readDouble();
                     nota2 = raf.readDouble();
                     notaFin = raf.readDouble();   
-                    Object[] datosAlumno = {idRegistro, ConvertirCharArrayString(nombre), ConvertirCharArrayString(fecha), nota1, nota2, notaFin};
+                    Object[] datosAlumno = {idRegistro, new String(nombreBytes), new String(fechaBytes), nota1, nota2, notaFin};
                     tabla.addRow(datosAlumno);
                 }                  
             }
@@ -479,7 +485,10 @@ public class frameMain extends javax.swing.JFrame {
         double auxNota1 = (double)0;
         double auxNota2 = (double)0;
         double auxNotaFin = (double)0;
+        pos = (numExp-1) * TAMANO;
         try{
+            raf.seek(pos);
+            raf.readInt();
             raf.readFully(nombreBytes);    
             raf.readFully(fechaBytes);
             auxNombre = new String(nombreBytes);
@@ -492,8 +501,8 @@ public class frameMain extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error de lectura");
         }
         try{
-            raf.seek((numExp -1)*TAMANO);
-            raf.writeInt(numExp);
+            raf.seek(pos);
+            raf.readInt();
             if (txtNombre.getText().equals("")) {
                 raf.writeChars(auxNombre);
             } else{
@@ -504,8 +513,8 @@ public class frameMain extends javax.swing.JFrame {
             if (txtFnac.getText().equals("")) {
                 raf.writeChars(auxFechaNac);
             } else{
-                StringBuffer sb = new StringBuffer(txtFnac.getText());
-                sb.setLength(100);
+                StringBuffer sb = new StringBuffer(ConvertirStringDate(txtFnac.getText()));
+                sb.setLength(10);
                 raf.writeChars(sb.toString());
             }            
             if (txtNota1.getText().equals("")) {
@@ -526,6 +535,7 @@ public class frameMain extends javax.swing.JFrame {
         } catch(IOException ex){
             JOptionPane.showMessageDialog(null, "Error de lectura");            
         }
+        cargarDatos();
     }
     
     public static String ConvertirStringDate(String fechaString){

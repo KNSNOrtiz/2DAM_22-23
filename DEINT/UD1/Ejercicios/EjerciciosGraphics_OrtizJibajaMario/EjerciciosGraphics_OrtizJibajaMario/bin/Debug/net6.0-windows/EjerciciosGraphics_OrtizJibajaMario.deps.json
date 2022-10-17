@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EjerciciosGraphics_OrtizJibajaMario/1.0.0": {
+        "runtime": {
+          "EjerciciosGraphics_OrtizJibajaMario.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EjerciciosGraphics_OrtizJibajaMario/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\bin\Debug\net6.0-windows\arrayControles.exe
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\bin\Debug\net6.0-windows\arrayControles.deps.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\bin\Debug\net6.0-windows\arrayControles.runtimeconfig.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\bin\Debug\net6.0-windows\arrayControles.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\bin\Debug\net6.0-windows\arrayControles.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.vbproj.AssemblyReference.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.Form1.resources
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.vbproj.GenerateResource.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.AssemblyInfoInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.AssemblyInfo.vb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.vbproj.CoreCompileInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\refint\arrayControles.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\arrayControles.genruntimeconfig.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\arrayControles\arrayControles\obj\Debug\net6.0-windows\ref\arrayControles.dll

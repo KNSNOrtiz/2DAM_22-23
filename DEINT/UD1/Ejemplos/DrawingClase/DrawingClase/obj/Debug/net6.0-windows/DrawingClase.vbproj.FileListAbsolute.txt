@@ -1,0 +1,17 @@
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\bin\Debug\net6.0-windows\DrawingClase.exe
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\bin\Debug\net6.0-windows\DrawingClase.deps.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\bin\Debug\net6.0-windows\DrawingClase.runtimeconfig.json
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\bin\Debug\net6.0-windows\DrawingClase.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\bin\Debug\net6.0-windows\DrawingClase.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.vbproj.AssemblyReference.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.Form1.resources
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.vbproj.GenerateResource.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.AssemblyInfoInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.AssemblyInfo.vb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.vbproj.CoreCompileInputs.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\refint\DrawingClase.dll
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.pdb
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\DrawingClase.genruntimeconfig.cache
+C:\Users\akihi\OneDrive\Documentos\2º DAM\DEINT\UD1\Ejemplos\DrawingClase\DrawingClase\obj\Debug\net6.0-windows\ref\DrawingClase.dll

@@ -1,5 +1,6 @@
 package alumno;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class main {
@@ -10,10 +11,20 @@ public class main {
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         ObjectInputStream ois = new ObjectInputStream(fis);
         Alumno al = new Alumno(1000, 8.5, "Ortiz", "Jibaja", "Mario", new Date(2003, 0, 9));
+        Alumno a2 = new Alumno(1000, 8.5, "lao", "ses", "Wen", new Date(2022, 9, 13));
+        ArrayList<Alumno> listaAlumnos = new ArrayList<>();
+        listaAlumnos.add(al);
+        listaAlumnos.add(a2);
+        for(Alumno alTmp : listaAlumnos){
+            oos.writeObject(alTmp);
+        }
         oos.writeObject(al);
         oos.close();
         fos.close();
+        
         Alumno alCopia = (Alumno)ois.readObject();
+        System.out.println(alCopia.toString());
+        
         //  Otra forma de hacerlo /////////////////////
         Object al2;
         try {
@@ -28,6 +39,6 @@ public class main {
         ois.close();
 
         fis.close();
-        System.out.println(alCopia.toString());
+
     }
 }
