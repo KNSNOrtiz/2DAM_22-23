@@ -160,7 +160,6 @@ Public Class winMain
 
     Private Sub mitEj9_Click(sender As Object, e As EventArgs) Handles mitEj9.Click     '   Puede ser necesario darle dos veces al ejercicio para que se muestre el círculo.
         Limpiar()
-        graficar = Me.CreateGraphics()
         color = New System.Drawing.Pen(System.Drawing.Color.Black)
         Dim x As Integer = 0
         Dim y As Integer = 0
@@ -182,6 +181,7 @@ Public Class winMain
         lblDiametro.Visible = True
         lblArea.Visible = True
         lblCircunferencia.Visible = True
+        graficar = Me.CreateGraphics()
         graficar.DrawEllipse(color, x, y, CInt(radio), CInt(radio))
     End Sub
 
@@ -191,7 +191,7 @@ Public Class winMain
         For i As Integer = 0 To 50
             DibujarLineas()
         Next
-        Thread.Sleep(2000)  '   De no pausar el programa, las líneas se borran automáticamente y no da tiempo a verlas. No he podido averiguar por qué.
+        'Thread.Sleep(2000)  '   De no pausar el programa, las líneas se borran automáticamente y no da tiempo a verlas. No he podido averiguar por qué, cuando ya estoy recreando el gráfico en PantallaCompleta().
     End Sub
 
     Private Sub winMain_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown

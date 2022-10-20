@@ -46,8 +46,8 @@ public class Lanzador {
     }
     public static int getSumaTotal(int numFicheros){
         int sumaTotal = 0;
-        for (int i = 1; i <= NUM_PROCESOS; i++) {
-            sumaTotal += getResultadoFichero(PREFIJO_FICHEROS+String.valueOf(i));
+        for (int i = 1; i <= numFicheros; i++) {
+            sumaTotal += getResultadoFichero(PREFIJO_FICHEROS + String.valueOf(i));
         }
         return sumaTotal;
     }
@@ -57,11 +57,11 @@ public class Lanzador {
         int n2=Integer.parseInt(args[1]);
         int salto =( n2 / NUM_PROCESOS);
         for (int i = 0; i <= NUM_PROCESOS; i++) {
-            System.out.println("n1: " +n1);
-            int resultadoSumaConSalto = n1+salto;
+            System.out.println("n1: " + n1);
+            int resultadoSumaConSalto = n1 + salto;
             System.out.println("n2: " + resultadoSumaConSalto);
-            l.lanzarSumador(n1, n1+salto, PREFIJO_FICHEROS+String.valueOf(i));
-            n1 = n1 + salto + 1;
+            l.lanzarSumador(n1, n1 + salto, PREFIJO_FICHEROS + String.valueOf(i));
+            n1 += salto + 1;
             
         }
         Thread.sleep(2000);

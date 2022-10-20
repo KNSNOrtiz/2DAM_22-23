@@ -1,43 +1,38 @@
-
+package pspentregaud1;
 /*
 *   Autores: Wenceslao García Chando, Mario Ortiz Jibaja | 2º DAM    
 */
 
-import java.io.*;
-import java.nio.file.Files;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SumarContabilidad {
-    public static int Sumar(<ArrayList><int> numeros){
+    static int total = 0;
+    public int Sumar(String nombreFichero){
+        File fichero = new File(nombreFichero);
         int total = 0;
-        for (int i = 0; i < numeros.length; i++) {
-            total += numeros[i];
-        }
-        return total;
-    }
-    public static int LeerFicheros(String nombreFichero){
-        int suma = 0;
         try {
-            FileInputStream lector = new FileInputStream(nombreFichero);
-            ArrayList<String> lineas = new ArrayList<>(); 
-            ArrayList<int> numeros = new ArrayList<>();
-            lineas = Files.readAllLines(nombreFichero);
-            for (int i = 0; i < lineas.size(); i++) {
-                numeros.add(Integer.parseInt(lineas[i]));
+            FileReader reader = new FileReader(fichero);
+            BufferedReader lector = new BufferedReader(reader);
+            String linea = "";
+            while ((linea = lector.readLine()) != null) {                
+                total += Integer.valueOf(linea);
             }
-            return Sumar(numeros);
         } catch (FileNotFoundException ex) {
-            System.out.println("No se pudo abrir" + nombreFichero);
+            System.out.println("No se pudo abrir o no se encontró " + nombreFichero);
         } catch (IOException ex){
             System.out.println("No hay nada en " + nombreFichero);
-        } catch (NumberFormatExcepcion ex){
-            System.out.println("En el fichero hay información no numérica.");
-        }
-        return suma;
+        } 
+        return total;
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        SumarContabilidad s = new SumarContabilidad();
+        System.out.println(s.Sumar(args[0]));
     }
 
 }
