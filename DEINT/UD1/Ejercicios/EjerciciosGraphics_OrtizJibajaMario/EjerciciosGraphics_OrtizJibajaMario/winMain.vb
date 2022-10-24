@@ -174,15 +174,16 @@ Public Class winMain
             diametro = Math.Pow(radio, 2)
             area = Math.Round(Math.PI * diametro, 2)
             circunferencia = Math.Round(2 * Math.PI * radio, 2)
+            lblDiametro.Text = "Diámetro: " + diametro.ToString
+            lblArea.Text = "Área: " + area.ToString
+            lblCircunferencia.Text = "Circunferencia: " + circunferencia.ToString
+            lblDiametro.Visible = True
+            lblArea.Visible = True
+            lblCircunferencia.Visible = True
+            graficar = Me.CreateGraphics()
+            graficar.DrawEllipse(color, x, y, CInt(radio), CInt(radio))
         End If
-        lblDiametro.Text = "Diámetro: " + diametro.ToString
-        lblArea.Text = "Área: " + area.ToString
-        lblCircunferencia.Text = "Circunferencia: " + circunferencia.ToString
-        lblDiametro.Visible = True
-        lblArea.Visible = True
-        lblCircunferencia.Visible = True
-        graficar = Me.CreateGraphics()
-        graficar.DrawEllipse(color, x, y, CInt(radio), CInt(radio))
+
     End Sub
 
     Private Sub mitEj10_Click(sender As Object, e As EventArgs) Handles mitEj10.Click
