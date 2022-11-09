@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/Ortiz_Mario/src/dialogAlta.java</file>
-            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/Ortiz_Mario/src/mainFrame.java</file>
-            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/Ortiz_Mario/src/Alumno.java</file>
-            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/Ortiz_Mario/src/dialogModificar.java</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/src/Vista/dialogAlta.java</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/alumnos.xml</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/alumnos.dat</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/src/Vista/mainFrame.java</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/src/Controlador/CtrlAlumnos.java</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/alumnos1.txt</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/src/Modelo/Alumno.java</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/alumnos.txt</file>
+            <file>file:/C:/Users/akihi/OneDrive/Documentos/2º%20DAM/ACDAT/UD1/Ortiz_Mario/src/Vista/dialogModificar.java</file>
         </group>
     </open-files>
 </project-private>

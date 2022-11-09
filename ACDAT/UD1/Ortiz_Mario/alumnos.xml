@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Alumnos>
+<Alumno>
+<NumMatricula>1</NumMatricula>
+<Nombre>Mario Ortiz</Nombre>
+<FechaNacimiento>09/01/2003</FechaNacimiento>
+<NotaMedia>10.0</NotaMedia>
+<Edad>19</Edad>
+</Alumno>
+<Alumno>
+<NumMatricula>2</NumMatricula>
+<Nombre>Hola</Nombre>
+<FechaNacimiento>01/01/2001</FechaNacimiento>
+<NotaMedia>1.0</NotaMedia>
+<Edad>1</Edad>
+</Alumno>
+<Alumno>
+<NumMatricula>3</NumMatricula>
+<Nombre>Manu</Nombre>
+<FechaNacimiento>11/07/1992</FechaNacimiento>
+<NotaMedia>8.0</NotaMedia>
+<Edad>30</Edad>
+</Alumno>
+</Alumnos>

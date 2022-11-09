@@ -43,8 +43,7 @@ public class CajeraThread extends Thread {
         
 
 	@Override
-	public void run() {
-
+	public void run() 
 		System.out.println("La cajera " + this.nombre + " COMIENZA A PROCESAR LA COMPRA DEL CLIENTE " 
 					+ this.cliente.getNombre() + " EN EL TIEMPO: " 
 					+ (System.currentTimeMillis() - this.initialTime) / 1000 
