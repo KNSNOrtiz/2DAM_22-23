@@ -14,15 +14,15 @@ public class CtrlCliente {
     private int filasAfectadas;
     private ArrayList<Cliente> listaClientes = new ArrayList<>();
     private PreparedStatement psp;
-    private String query;
+    private String sql;
     private ResultSet rs;
     
     public int AltaCliente(Cliente cliente){
         filasAfectadas = -1;
         if (frameBD.conexion != null) {
-            query = "INSERT INTO CLIENTES VALUES(?,?,?,?,?,?,?)";
+            sql = "INSERT INTO CLIENTES VALUES(?,?,?,?,?,?,?)";
             try {
-                psp = frameBD.conexion.prepareStatement(query);
+                psp = frameBD.conexion.prepareStatement(sql);
                 psp.setString(1, cliente.getCodCliente());
                 psp.setString(2, cliente.getNombre());
                 psp.setString(3, cliente.getApellido1());
@@ -43,9 +43,9 @@ public class CtrlCliente {
     public int BajaCliente(String codCliente){
         filasAfectadas = -1;
         if (frameBD.conexion != null) {
-            query = "DELETE CLIENTES WHERE CODCLIENTE = ?";
+            sql = "DELETE CLIENTES WHERE CODCLIENTE = ?";
             try {
-                psp = frameBD.conexion.prepareStatement(query);
+                psp = frameBD.conexion.prepareStatement(sql);
                 psp.setString(1, codCliente);          
                 filasAfectadas = psp.executeUpdate();
                 psp.close();
@@ -60,9 +60,9 @@ public class CtrlCliente {
     public int ModificarCliente(Cliente cli){
         filasAfectadas = -1;
         if (frameBD.conexion != null) {
-            query = "UPDATE CLIENTE SET VALUES(?,?,?,?,?,?,?) WHERE CODCLIENTE = ?";
+            sql = "UPDATE CLIENTE SET VALUES(?,?,?,?,?,?,?) WHERE CODCLIENTE = ?";
             /*try {
-                psp = frameBD.conexion.prepareStatement(query);
+                psp = frameBD.conexion.prepareStatement(sql);
                 psp.setString(1, cliente.getCodCliente());
                 psp.setString(2, cliente.getNombre());
                 psp.setString(3, cliente.getApellido1());
@@ -84,12 +84,12 @@ public class CtrlCliente {
         listaClientes.clear();
         if (frameBD.conexion != null) {
             if (where.equals("")) {
-                query = "SELECT * FROM CLIENTES"; 
+                sql = "SELECT * FROM CLIENTES"; 
             } else {
-                query = "SELECT * FROM CLIENTES WHERE " + where;
+                sql = "SELECT * FROM CLIENTES WHERE " + where;
             }       
             try {
-                psp = frameBD.conexion.prepareStatement(query);   
+                psp = frameBD.conexion.prepareStatement(sql);   
                 rs = psp.executeQuery();
                 while (rs.next()) {                    
                     listaClientes.add(new Cliente(

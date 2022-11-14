@@ -21,7 +21,6 @@ public class CtrlBD {
         ResultSet rs = null;
         try {
             stmt = con.prepareStatement(query);
-            
             rs = stmt.executeQuery();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "ERROR: No se ha podido ejecutar la consulta SQL.");
@@ -29,4 +28,5 @@ public class CtrlBD {
         }
         return rs;
     }
+    
 }
