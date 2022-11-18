@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2022 17:49:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Cuentas" table="CUENTAS" schema="HIB_001" optimistic-lock="version">
+        <composite-id name="id" class="modelo.CuentasId">
+            <key-property name="codbanco" type="string">
+                <column name="CODBANCO" length="4" />
+            </key-property>
+            <key-property name="numcta" type="string">
+                <column name="NUMCTA" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="titular" type="string">
+            <column name="TITULAR" length="100" />
+        </property>
+        <property name="saldo" type="big_decimal">
+            <column name="SALDO" precision="12" />
+        </property>
+    </class>
+</hibernate-mapping>

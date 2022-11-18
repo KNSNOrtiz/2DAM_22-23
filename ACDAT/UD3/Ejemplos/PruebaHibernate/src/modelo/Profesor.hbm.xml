@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2022 17:49:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Profesor" table="PROFESOR" schema="HIB_001" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="100" />
+        </property>
+        <property name="ape1" type="string">
+            <column name="APE1" length="100" />
+        </property>
+        <property name="ape2" type="string">
+            <column name="APE2" length="100" />
+        </property>
+        <one-to-one name="direccion" cascade="all"/>
+    </class>
+</hibernate-mapping>
