@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="3b.peso_jugadores" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23f3b4bd-0578-4243-93d6-f5f75bbd7418">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="equipo" class="java.lang.String">
+		<parameterDescription><![CDATA[Nombre del equipo de los jugadores]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from jugadores where nombre_equipo = $P{equipo}]]>
+	</queryString>
+	<field name="codigo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Procedencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Altura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Peso" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Posicion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_equipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="65" y="10" width="454" height="64" uuid="4bb666e9-ae77-4a0e-8345-dfc4150cb7cc"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PESO DE LOS JUGADORES DEL EQUIPO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="434" y="10" width="100" height="45" uuid="56b35859-e7f4-4b69-91f9-ecaac6f56419"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="10" width="146" height="86" uuid="e08bc4e3-4eef-47c3-9cd0-b5293b7a98c0"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="381" y="76" width="153" height="20" uuid="0ab31874-1768-4f1d-a94e-24a75f7a84ae"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="273" splitType="Stretch">
+			<pieChart>
+				<chart>
+					<reportElement x="0" y="0" width="555" height="273" uuid="06244e7f-8a15-4b1f-8ef8-8401465ad3bb"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{Nombre}]]></keyExpression>
+					<valueExpression><![CDATA[$F{Peso}]]></valueExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<libros>
-<libro numPaginas="20">Peppa Pig</libro>
-<libro numPaginas="330">Harry Potter</libro>
-</libros>
+<Articulos>
+<Libro Autor="Miguel Cervantes">
+<Titulo>El Quijote</Titulo>
+</Libro>
+</Articulos>

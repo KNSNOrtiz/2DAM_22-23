@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="5a.estadisticas_jugador" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="24f69f35-6835-4849-ad55-95e05c6d5374">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="7"/>
+	<parameter name="codigo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\akihi\\OneDrive\\Documentos\\2º DAM\\DEINT\\UD2\\Ejercicios\\NBA\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM JUGADORES WHERE CODIGO = $P{codigo}]]>
+	</queryString>
+	<field name="codigo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Procedencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Altura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Peso" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Posicion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_equipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="76" y="10" width="454" height="64" uuid="402da85b-d1b7-4cb2-92f9-f5050fa07279"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL JUGADOR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="118" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="381" y="76" width="153" height="20" uuid="8c484775-ad6f-45eb-816d-2288a19998df"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="10" width="146" height="86" uuid="0444e31c-fad9-4444-9dbe-3d95fe851a3f"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="434" y="10" width="100" height="45" uuid="3142255f-0132-4340-b377-86a00867caed"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="0" width="100" height="20" uuid="90e1438e-4e28-4a3a-9b9a-fd64d789c39e"/>
+				<text><![CDATA[codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="100" height="20" uuid="4e0ebc3f-8de5-4052-8856-1bedfff500a6"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="100" height="20" uuid="7ee73605-40e1-42b7-a2fb-7d673afdf68c"/>
+				<text><![CDATA[Altura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="0" width="100" height="20" uuid="936ccb80-fb6f-438a-ad2e-460ba4a88111"/>
+				<text><![CDATA[Nombre_equipo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="146" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="100" height="20" uuid="ce8255ac-f211-417a-ab72-3134a0e62ccd"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="100" height="20" uuid="c84bed59-df81-4e35-b6bc-d09b40a09ca7"/>
+				<textFieldExpression><![CDATA[$F{Altura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="0" width="100" height="20" uuid="f4c01dfb-37ac-41f5-aaae-8f0c1e5676a1"/>
+				<textFieldExpression><![CDATA[$F{Nombre_equipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="100" height="20" uuid="d0f38135-e57a-4a72-a618-d1cacfe65762"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="46" width="555" height="100" uuid="a9fca673-9ed1-4931-93f9-b834bdc5eb85"/>
+				<subreportParameter name="nombre">
+					<subreportParameterExpression><![CDATA[$F{Nombre_equipo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "5a.subinforme_equipo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="414" y="0" width="80" height="20" uuid="dc5fe309-9664-4794-8778-ab001604e04a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="494" y="0" width="40" height="20" uuid="58e6213b-b602-4187-8f0a-8c9b749a3ccc"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

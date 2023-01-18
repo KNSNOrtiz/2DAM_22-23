@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-nov-2022 17:10:03 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Libro" table="LIBRO" schema="HIB_001" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="persona" class="modelo.Persona" fetch="select">
+            <column name="IDPERSONA" precision="10" scale="0" />
+        </many-to-one>
+        <property name="titulo" type="string">
+            <column name="TITULO" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

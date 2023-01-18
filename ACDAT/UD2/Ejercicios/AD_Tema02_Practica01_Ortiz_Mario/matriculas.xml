@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Matriculas>
-	<Matricula>
-		<CodAlumno>001</CodAlumno>
-		<Nombre>Antonio</Nombre>
-		<Cursos>
-			<Curso>
-			<CodCurso>I001</CodCurso>
-			<NombreCurso>Ingles Basico</NombreCurso>
-			<NotaMedia>0.0</NotaMedia>
-			</Curso>
-		</Cursos>
-	</Matricula>
-	<Matricula>
-		<CodAlumno>002</CodAlumno>
-		<Nombre>Maria</Nombre>
-		<Cursos>
-			<Curso>
-			<CodCurso>I001</CodCurso>
-			<NombreCurso>Ingles Basico</NombreCurso>
-			<NotaMedia>0.0</NotaMedia>
-			</Curso>
-		</Cursos>
-	</Matricula>
+<Matricula>
+<CodAlumno>001</CodAlumno>
+<Nombre>Antonio</Nombre>
+<Cursos>
+<Curso>
+<CodCurso>I001</CodCurso>
+<NombreCurso>Ingles Basico</NombreCurso>
+<NotaMedia>0.0</NotaMedia>
+</Curso>
+</Cursos>
+</Matricula>
+<Matricula>
+<CodAlumno>002</CodAlumno>
+<Nombre>Maria</Nombre>
+<Cursos>
+<Curso>
+<CodCurso>I001</CodCurso>
+<NombreCurso>Ingles Basico</NombreCurso>
+<NotaMedia>3.0</NotaMedia>
+</Curso>
+</Cursos>
+</Matricula>
 </Matriculas>

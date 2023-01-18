@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="1c.peso_medio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="290f35db-1356-4965-aa69-ea3f745925aa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM JUGADORES]]>
+	</queryString>
+	<field name="codigo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Procedencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Altura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Peso" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Posicion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_equipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Peso_1" class="java.lang.Float" resetType="Group" resetGroup="grupoEquipo" calculation="Average">
+		<variableExpression><![CDATA[$F{Peso}]]></variableExpression>
+	</variable>
+	<variable name="Peso_2" class="java.lang.Float" calculation="Average">
+		<variableExpression><![CDATA[$F{Peso}]]></variableExpression>
+	</variable>
+	<group name="grupoEquipo">
+		<groupExpression><![CDATA[$F{Nombre_equipo}]]></groupExpression>
+		<groupFooter>
+			<band height="42">
+				<textField>
+					<reportElement x="10" y="0" width="208" height="20" uuid="2fc5045e-26e1-45a5-99d9-126bb5a82533"/>
+					<textFieldExpression><![CDATA['Peso medio del equipo: '+$V{Peso_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="78" y="0" width="411" height="63" uuid="e1e54579-2728-4b2a-af93-89bf2a8ceeb5"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PESO MEDIO DE CADA EQUIPO Y
+	MEDIA TOTAL ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="135" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="385" y="85" width="153" height="20" uuid="fbdaf605-a353-4da1-927e-14118e0665ad"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="10" width="163" height="75" uuid="dba71d07-1eef-45da-bb26-9dbc5fabc488"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="438" y="29" width="100" height="45" uuid="600979b3-7b84-4290-8758-8d920728bf94"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="0" width="73" height="20" uuid="bc2387d5-93aa-4447-aefe-5d4f8c4cc00d"/>
+				<text><![CDATA[codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="0" width="100" height="20" uuid="5355febe-d660-407f-a34d-6f3e68b94a3e"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="100" height="20" uuid="99022074-eb66-4b6f-811b-14e3fe4e556b"/>
+				<text><![CDATA[Nombre_equipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="20" uuid="2e1f04b2-d504-41cb-a2c0-2ae59536ce7a"/>
+				<text><![CDATA[Peso]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="0" width="73" height="20" uuid="e3a41a4d-c67e-4595-abbc-cc2ddb7e6b87"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="0" width="100" height="20" uuid="49d6b997-e2a7-48e4-a94b-19ccde231367"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="0" width="100" height="20" uuid="14ca08b8-23e7-4429-a6ce-05317b68523c"/>
+				<textFieldExpression><![CDATA[$F{Nombre_equipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="7" width="100" height="20" uuid="63a40566-80d6-4149-a272-d427830cf793"/>
+				<textFieldExpression><![CDATA[$F{Peso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="422" y="0" width="80" height="20" uuid="cb86b312-e204-4f8b-a136-72897a3ea9a1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="502" y="0" width="40" height="20" uuid="bc045e44-cc89-4775-8038-a0d6300e8648"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="208" height="20" uuid="aea44daf-1a57-4399-88b1-ff19b546e9f4"/>
+				<textFieldExpression><![CDATA['Peso medio total: '+$V{Peso_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

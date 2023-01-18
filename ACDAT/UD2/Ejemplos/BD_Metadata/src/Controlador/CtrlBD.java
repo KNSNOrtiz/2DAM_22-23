@@ -60,8 +60,7 @@ public class CtrlBD {
                     rs = stmt.executeQuery(sql);         
                     while (rs.next()) {  
                         Object[] registro = new Object[numCol];
-                        for (int i = 0; i < numCol; i++) {
-                            
+                        for (int i = 0; i < numCol; i++) { 
                             registro[i] = rs.getObject(i+1);
                         }             
                         listaObjetos.add(registro);

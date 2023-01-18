@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="3c.peso_equipos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce9b5dbf-890f-41d2-923d-139cb90ab7d9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM JUGADORES]]>
+	</queryString>
+	<field name="codigo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Procedencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Altura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Peso" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Posicion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_equipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="pesoMedioEquipo" class="java.lang.Float" resetType="Group" resetGroup="grupoEquipo" incrementType="Group" incrementGroup="grupoEquipo" calculation="Average"/>
+	<group name="grupoEquipo">
+		<groupExpression><![CDATA[$F{Nombre_equipo}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="454" height="64" uuid="89b755a9-c3cf-45ce-8931-486e2b6ae0e8"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PESO MEDIO DE CADA EQUIPO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="434" y="10" width="100" height="45" uuid="00078746-fedf-41a8-91f8-74f0912b96a1"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="10" width="146" height="86" uuid="78d3bc7b-8bdf-41e9-9831-6872b8767555"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="381" y="76" width="153" height="20" uuid="3c242cfc-a364-426d-b046-6ef30c9b4ae2"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="249" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="555" height="249" uuid="cf817301-f57d-48de-b732-5ba1da9974c7"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Peso medio por equipo"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{Nombre_equipo}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Peso}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

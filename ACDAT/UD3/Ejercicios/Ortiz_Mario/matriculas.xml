@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Matriculas>
+<Matricula>
+<CodAlumno>002</CodAlumno>
+<Nombre>María</Nombre>
+<Cursos>
+<Curso>
+<CodCurso>I001</CodCurso>
+<NombreCurso>Ingles Basico</NombreCurso>
+<NotaMedia>3</NotaMedia>
+</Curso>
+<Curso>
+<CodCurso>I002</CodCurso>
+<NombreCurso>Ingles Intermedio</NombreCurso>
+<NotaMedia>0</NotaMedia>
+</Curso>
+</Cursos>
+</Matricula>
+<Matricula>
+<CodAlumno>001</CodAlumno>
+<Nombre>Antonio</Nombre>
+<Cursos>
+<Curso>
+<CodCurso>I002</CodCurso>
+<NombreCurso>Ingles Intermedio</NombreCurso>
+<NotaMedia>10</NotaMedia>
+</Curso>
+<Curso>
+<CodCurso>C002</CodCurso>
+<NombreCurso>Chino Intermedio</NombreCurso>
+<NotaMedia>0</NotaMedia>
+</Curso>
+<Curso>
+<CodCurso>F001</CodCurso>
+<NombreCurso>Frances Basico</NombreCurso>
+<NotaMedia>0</NotaMedia>
+</Curso>
+</Cursos>
+</Matricula>
+<Matricula>
+<CodAlumno>003</CodAlumno>
+<Nombre>Mario</Nombre>
+<Cursos>
+<Curso>
+<CodCurso>A001</CodCurso>
+<NombreCurso>Chino Mandarín</NombreCurso>
+<NotaMedia>7</NotaMedia>
+</Curso>
+</Cursos>
+</Matricula>
+</Matriculas>

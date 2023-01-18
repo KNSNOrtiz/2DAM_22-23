@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="5a.subinforme_equipo" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="39b73f4c-89da-4df3-b6ca-92e226bfcd67">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nombre" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM EQUIPOS WHERE NOMBRE = $P{nombre}]]>
+	</queryString>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Conferencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Division" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="134" y="15" width="289" height="64" uuid="97836d9c-a7ed-4a6e-8230-20bbb02d75e7"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DE SU EQUIPO ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="2" width="100" height="20" uuid="fc940d07-df22-48d1-afde-7efe7bb7d15c"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="2" width="100" height="20" uuid="38ddd5b9-aef3-4560-9e99-389265c13f7c"/>
+				<text><![CDATA[Ciudad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="2" width="100" height="20" uuid="6e7d2fd0-a35f-4ee6-92cd-cea586e20d84"/>
+				<text><![CDATA[Conferencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="2" width="100" height="20" uuid="c0344fd6-55b4-4284-8bd0-5f40d4ad7264"/>
+				<text><![CDATA[Division]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="0" width="100" height="20" uuid="5738bf9a-bdbb-47a1-9cbe-e5a9a0377501"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="100" height="20" uuid="40114090-c500-42ea-9cf9-31f776344944"/>
+				<textFieldExpression><![CDATA[$F{Ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="0" width="100" height="20" uuid="222fa4d0-9edf-4abd-b81e-d337dcd91406"/>
+				<textFieldExpression><![CDATA[$F{Conferencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="100" height="20" uuid="3424aac7-cc42-4241-9772-fd027a1f8e07"/>
+				<textFieldExpression><![CDATA[$F{Division}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

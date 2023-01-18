@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="3a.estadísticas_equipo" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3f5211a8-9141-41c1-a8ed-c9e1d38e0e89">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="equipo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM ESTADISTICAS WHERE JUGADOR IN (SELECT CODIGO FROM JUGADORES WHERE NOMBRE_EQUIPO = $P{equipo})]]>
+	</queryString>
+	<field name="temporada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jugador" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Puntos_por_partido" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Asistencias_por_partido" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tapones_por_partido" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Rebotes_por_partido" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="66" y="0" width="454" height="64" uuid="7d483257-eb69-4c9e-8676-4257075de3ab"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ESTADÍSTICAS DE LOS JUGADORES
+POR CÓDIGO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="87" splitType="Stretch">
+			<image>
+				<reportElement x="11" y="0" width="146" height="86" uuid="8a8e3cf8-1aa7-4f06-9b47-d2fceae84443"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="382" y="66" width="153" height="20" uuid="dadb3224-5f6a-4ffe-b530-1d7ea494f8ac"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="435" y="0" width="100" height="45" uuid="8f4ca41a-56dd-4df9-90d4-43c5578bed66"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="228" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="16" width="555" height="212" uuid="2cf937b4-68b1-4371-8da5-105b3bb284c7"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Puntos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{jugador}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Puntos_por_partido}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Asistencias"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{jugador}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Asistencias_por_partido}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Tapones"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{jugador}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Tapones_por_partido}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

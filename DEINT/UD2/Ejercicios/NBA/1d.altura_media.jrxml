@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="1d.altura_media" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="878df330-215d-4e4c-8f21-3ea39c88a1f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM JUGADORES
+]]>
+	</queryString>
+	<field name="codigo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Procedencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Altura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Peso" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Posicion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_equipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="alturaMediaEquipo" class="java.lang.Float" resetType="Group" resetGroup="grupoEquipo" calculation="Average">
+		<variableExpression><![CDATA[Float.parseFloat($F{Altura}.substring(0, $F{Altura}.indexOf('-')))*30.49 + Float.parseFloat($F{Altura}.substring($F{Altura}.indexOf('-')+1)) * 2.54]]></variableExpression>
+	</variable>
+	<variable name="alturaMediaTotal" class="java.lang.Float" calculation="Average">
+		<variableExpression><![CDATA[Float.parseFloat($F{Altura}.substring(0, $F{Altura}.indexOf('-')))*30.49 + Float.parseFloat($F{Altura}.substring($F{Altura}.indexOf('-')+1)) * 2.54]]></variableExpression>
+	</variable>
+	<group name="grupoEquipo">
+		<groupExpression><![CDATA[$F{Nombre_equipo}]]></groupExpression>
+		<groupFooter>
+			<band height="50">
+				<textField>
+					<reportElement x="39" y="17" width="291" height="20" uuid="7bee041a-1409-4199-803f-3bb67b131c2b"/>
+					<textFieldExpression><![CDATA["Altura media del equipo: " + $V{alturaMediaEquipo} + " cm"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="0" width="450" height="79" uuid="5aa7e953-7672-4666-96c3-d1467945ebdc"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ALTURA MEDIA DE CADA EQUIPO Y
+	MEDIA TOTAL ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="106" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="163" height="75" uuid="12a89848-fce8-4622-8fb1-34a535ebf00c"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="438" y="29" width="100" height="45" uuid="4835a511-e4b4-4b27-8cb6-4608acf6a5de"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="385" y="85" width="153" height="20" uuid="b7093916-763f-4c89-87d9-ca3915450a69"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="39" y="2" width="100" height="20" uuid="d6f796c6-470e-4f52-87aa-3485fed2b1f5"/>
+				<text><![CDATA[codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="2" width="100" height="20" uuid="b037edcd-cd20-4950-9ce2-cc5e2b13905a"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="2" width="100" height="20" uuid="256b3890-17b8-415c-8336-313f9915e75d"/>
+				<text><![CDATA[Nombre_equipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="461" y="2" width="100" height="20" uuid="8dfc892c-79fe-4a77-96af-2de13eb1eee7"/>
+				<text><![CDATA[Altura]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="0" width="100" height="20" uuid="b9f62832-3d0d-485f-a178-ed1ea0cd8603"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="0" width="100" height="20" uuid="3752ed71-c1b6-40c5-9cd7-75ae4621b021"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="100" height="20" uuid="9eec982d-1d27-4098-847f-cc62041cb13a"/>
+				<textFieldExpression><![CDATA[$F{Nombre_equipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="6" width="100" height="20" uuid="e43c0841-fbdd-47ba-94f1-9f22347d6c1a"/>
+				<textFieldExpression><![CDATA[$F{Altura}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="0" width="80" height="20" uuid="31ef4c17-d5ac-4b13-b3a0-e5de83507aba"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="510" y="0" width="40" height="20" uuid="355740a7-07ee-4b28-bb8f-578e79fc44d4"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="0" width="161" height="20" uuid="5f93eae2-9017-4783-b6a0-14ba227f440d"/>
+				<textFieldExpression><![CDATA["Altura media total: " + $V{alturaMediaTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

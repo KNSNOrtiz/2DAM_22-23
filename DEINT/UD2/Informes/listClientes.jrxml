@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listClientes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="443c9895-d5bb-44ec-bf38-1cb7cb346724">
+	<property name="ireport.zoom" value="1.100000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="39"/>
+	<parameter name="ciudad" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[select * from clientes order by ciudad, ranking]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ranking" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="ciudad_1" class="java.lang.Integer" resetType="Column" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{ciudad}]]></variableExpression>
+	</variable>
+	<variable name="codigo_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{codigo}]]></variableExpression>
+	</variable>
+	<variable name="codigo_3" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{codigo}]]></variableExpression>
+	</variable>
+	<variable name="codigo_4" class="java.lang.Integer" resetType="Group" resetGroup="grupoCiudad" calculation="Count">
+		<variableExpression><![CDATA[$F{codigo}]]></variableExpression>
+	</variable>
+	<variable name="codigo_2" class="java.lang.Integer" resetType="Group" resetGroup="grupoRanking" calculation="Count">
+		<variableExpression><![CDATA[$F{codigo}]]></variableExpression>
+	</variable>
+	<variable name="media_ciudad" class="java.lang.Number" incrementType="Group" incrementGroup="grupoCiudad" calculation="Average">
+		<variableExpression><![CDATA[$V{codigo_4}]]></variableExpression>
+	</variable>
+	<group name="grupoCiudad">
+		<groupExpression><![CDATA[$F{ciudad}]]></groupExpression>
+		<groupHeader>
+			<band height="22">
+				<textField>
+					<reportElement x="300" y="0" width="100" height="20" uuid="22e0bcf8-c28a-48a8-961b-05d292c3ce1e"/>
+					<textFieldExpression><![CDATA["Clientes de "+$F{ciudad}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="22">
+				<textField>
+					<reportElement x="249" y="0" width="181" height="20" uuid="6da69723-90c2-440c-9916-ee52602e924a"/>
+					<textFieldExpression><![CDATA["Número de clientes: "+$V{codigo_4}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="grupoRanking">
+		<groupExpression><![CDATA[$F{ranking}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField>
+					<reportElement x="300" y="0" width="100" height="20" uuid="827df2f0-1336-416a-8be7-f4ac25eac327"/>
+					<textFieldExpression><![CDATA["De ranking "+$F{ranking}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="22">
+				<textField>
+					<reportElement x="176" y="0" width="240" height="20" uuid="c0c97a94-f14a-4017-a959-48095c42732a"/>
+					<textFieldExpression><![CDATA["número de registros de este ranking "+$V{codigo_2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="209" y="14" width="140" height="21" uuid="d71a35b3-0d6c-4baf-b540-c514611458b1"/>
+				<text><![CDATA[LISTADO DE CLIENTES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="2" width="100" height="20" uuid="a466813a-283e-46e5-bdd9-b04a2d00d78e"/>
+				<text><![CDATA[codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="2" width="100" height="20" uuid="fb3cd1c7-3346-4935-b954-85eb84da042d"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="2" width="100" height="20" uuid="6c35459a-bde5-4f46-9d78-2be644d5c51c"/>
+				<text><![CDATA[ciudad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="1" width="100" height="20" uuid="01d4d5cb-f8d3-434c-94aa-3b5afffa54ea"/>
+				<text><![CDATA[ranking]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="121" y="0" width="55" height="20" uuid="14435a20-0a70-4a3f-b4dc-a55ef8f0d78f"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="20" uuid="d288821a-242c-460b-86fb-cd7b15e82f50"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="2" width="100" height="20" uuid="3dc0f9f2-4b73-4d51-85e6-815afc642d07"/>
+				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="2" width="111" height="20" uuid="8f153603-b0bb-432f-8761-9a4df2a2f8ed"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="393" y="2" width="100" height="20" uuid="20530156-bea2-4ad0-bcdd-f53680943804"/>
+				<textFieldExpression><![CDATA[$F{ranking}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="249" y="6" width="100" height="20" uuid="f75e2b91-28a7-4c27-b492-0803bde20343"/>
+				<text><![CDATA[Nº de Ciudades:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="365" y="6" width="100" height="20" uuid="3776a5ef-8cce-4774-9768-387acfcaeaa3"/>
+				<textFieldExpression><![CDATA[$V{ciudad_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="38" y="19" width="100" height="20" uuid="21460fed-bd40-4128-80fc-c48336f518a4"/>
+				<text><![CDATA[Suma de códigos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="138" y="19" width="100" height="20" uuid="1e04a087-d17f-4eed-a568-a9eafa3e683c"/>
+				<textFieldExpression><![CDATA[$V{codigo_3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="271" y="21" width="100" height="20" uuid="76d78fe3-b8bc-4804-ac54-be7bd195bae9"/>
+				<textFieldExpression><![CDATA[$V{codigo_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="149" y="21" width="100" height="20" uuid="92ab0c1c-012a-4c0f-bfff-1e23475d6fb6"/>
+				<text><![CDATA[Cuenta códigos:]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="158" splitType="Stretch">
+			<bar3DChart>
+				<chart>
+					<reportElement x="52" y="18" width="200" height="100" uuid="28716305-cf3c-4d50-bcbf-6568e20c3c90"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Ciudades"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ciudad}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{codigo_4}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+			<textField>
+				<reportElement x="271" y="40" width="100" height="62" uuid="f5bc4073-fec5-44c7-a940-528770028f12"/>
+				<textFieldExpression><![CDATA["Media de clientes por ciudad: "+$V{media_ciudad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

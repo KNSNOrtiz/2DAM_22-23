@@ -111,11 +111,8 @@ public class CtrlExamen {
                     JOptionPane.showMessageDialog(null, "ERROR: No se ha podido crear el boletín.");
                 } catch (UnsupportedOperationException ex){
                     JOptionPane.showMessageDialog(null, "ERROR: No es posible abrir el fichero JSON desde el programa. Debe hacerse manualmente.");
-                }
-            
-            
-        }
-        
+                }         
+        }   
     }
     
 }

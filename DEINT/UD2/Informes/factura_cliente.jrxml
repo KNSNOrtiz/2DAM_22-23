@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura_cliente" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="168c1d93-4bab-451e-9d94-9d06ed35ab11">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codcliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from clientes where codigo = $P{codcliente}]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ranking" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="29" width="100" height="20" uuid="72cdab6c-94bb-424b-88a3-2515a8b86008"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="29" width="100" height="20" uuid="92696730-2c48-434e-8323-5fb3e5369b39"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="62" width="100" height="20" uuid="dd788262-bbfd-49e0-acf2-11895fcb3d0d"/>
+				<text><![CDATA[ciudad]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="62" width="100" height="20" uuid="ab17f6e2-8cef-435f-8da6-dac7630d8452"/>
+				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

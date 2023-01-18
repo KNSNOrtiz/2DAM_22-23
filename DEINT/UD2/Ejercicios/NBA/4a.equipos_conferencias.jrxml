@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="4a.equipos_conferencias" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d314a2ae-b3a6-4023-8c28-0bd51f2a4daf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM EQUIPOS ORDER BY CONFERENCIA]]>
+	</queryString>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Conferencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Division" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="grupoConferencia">
+		<groupExpression><![CDATA[$F{Conferencia}]]></groupExpression>
+		<groupHeader>
+			<band height="65">
+				<staticText>
+					<reportElement x="20" y="36" width="100" height="20" uuid="f437d538-eee8-409a-b087-54f6863e9439"/>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="156" y="36" width="100" height="20" uuid="325f4cec-7dd7-40fb-80d2-c858b5dd4b55"/>
+					<text><![CDATA[Ciudad]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="295" y="36" width="100" height="20" uuid="f4c60c54-ebce-49b1-99d8-9f43009b1936"/>
+					<text><![CDATA[Conferencia]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="434" y="36" width="100" height="20" uuid="c3862e1b-520e-4d50-9a6e-49e63511951d"/>
+					<text><![CDATA[Division]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="20" y="0" width="100" height="20" uuid="31e1f1df-4276-40a6-a4f9-5cc034bb5272"/>
+					<textFieldExpression><![CDATA["Equipos de: " + $F{Conferencia}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="79" y="10" width="454" height="64" uuid="81d8da18-2c88-4e5f-96fe-ffcc2e017189"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[EQUIPOS POR CONFERENCIA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="434" y="0" width="100" height="45" uuid="82b3ffc1-d28f-4f57-8135-d50043ae66ab"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOJ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="146" height="86" uuid="a50d9c8d-08f0-4d97-9f69-222499126987"/>
+				<imageExpression><![CDATA["NBA-logo-illustration.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="381" y="66" width="153" height="20" uuid="2aded3e3-4f00-4c27-a7f4-6d6df2df2285"/>
+				<textFieldExpression><![CDATA['Fecha: '+ new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50"/>
+	</columnHeader>
+	<detail>
+		<band height="31">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="20" uuid="0f170e77-72d1-4c34-9fdc-cdec8bb9e339"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="100" height="20" uuid="ce023c43-9de8-42ea-ba96-a2d09cb2345a"/>
+				<textFieldExpression><![CDATA[$F{Ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="100" height="20" uuid="a3b8d299-913e-4565-8c36-040deb80e3f5"/>
+				<textFieldExpression><![CDATA[$F{Conferencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="100" height="20" uuid="a0291dbf-4bba-4278-a529-1bcddfdc7de2"/>
+				<textFieldExpression><![CDATA[$F{Division}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="413" y="0" width="80" height="20" uuid="4cb50f4c-05a0-489c-adc2-4a482b14a018"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="493" y="0" width="40" height="20" uuid="041c2ded-afde-4037-af76-4adcd167fbf3"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
