@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Clientes>
+	<Cliente GRAFICO=”LogoEidos”>
+		<IdCliente>1</IdCliente>
+		<Empresa>Defensa Personal "Orient"</Empresa>
+		<Contacto>Alfonso Papo</Contacto>
+		<Ciudad>Ceuta</Ciudad>
+		<Pais>Ceuta</Pais>
+	</Cliente>
+	<Cliente GRAFICO=”Graficos/Logo2.gif”>
+		<IdCliente>2</IdCliente>
+		<Empresa>Mística y Salud S.A.</Empresa>
+		<Contacto>Ana Coreta</Contacto>
+		<Ciudad>Santander</Ciudad>
+		<Pais>Santander</Pais>
+	</Cliente>
+	<Cliente GRAFICO=”Graficos/Logo3.gif”>
+		<IdCliente>3</IdCliente>
+		<Empresa>Gráficas Cadillas Inc.</Empresa>
+		<Contacto>Tony Cono</Contacto>
+		<Ciudad>Terrassa</Ciudad>
+		<Pais>Barcelona</Pais>
+	</Cliente>
+</Clientes>

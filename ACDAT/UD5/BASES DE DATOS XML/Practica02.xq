@@ -1,0 +1,11 @@
+"Práctica 02 - Mario Ortiz Jibaja",
+"--------------------------------------",
+"Obtener los datos de las cuentas bancarias cuyo tipo sea AHORRO",
+//sucursales/sucursal/cuenta[@tipo="AHORRO"],
+"--------------------------------------",
+"Obtener por cada sucursal la concatenación de su código y el número de cuentas del tipo AHORRO que tiene.",
+//sucursales/sucursal/concat(@codigo, "-", count(cuenta[@tipo="AHORRO"]) ),
+"--------------------------------------",
+" Obtener las cuentas del tipo PENSIONES de la sucursal con código SUC3.",
+/sucursales/sucursal[@codigo="SUC3"]/cuenta[@tipo="AHORRO"],
+"--------------------------------------"
