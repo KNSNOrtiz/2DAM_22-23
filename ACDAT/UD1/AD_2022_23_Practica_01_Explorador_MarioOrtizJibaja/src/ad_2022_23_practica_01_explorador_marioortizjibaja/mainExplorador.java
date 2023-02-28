@@ -41,6 +41,7 @@ public class mainExplorador extends javax.swing.JFrame {
         btnFiltrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblArchivos = new javax.swing.JTable();
+        relojDigital1 = new relojdigital.RelojDigital();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Práctica 01: Explorador de archivos | Mario Ortiz Jibaja");
@@ -98,11 +99,17 @@ public class mainExplorador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(95, 95, 95))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addGap(22, 22, 22)
+                .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBuscar)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -246,6 +253,7 @@ public class mainExplorador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private relojdigital.RelojDigital relojDigital1;
     private javax.swing.JTable tblArchivos;
     private javax.swing.JTextField txtExtension;
     private javax.swing.JTextField txtRuta;

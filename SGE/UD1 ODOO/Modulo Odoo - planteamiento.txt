@@ -1,0 +1,39 @@
+	MÓDULO: MERCADO DE VIDEOJUEGOS
+
+
+
+MODELOS
+-----------------------------------------
+
+Tienda
+
+- Nombre (String)
+- Direccion (String)
+- Ciudad (String)
+- Provincia (String)
+- VIDEOJUEGOS --> UNO A MUCHOS
+
+Desarrolladora
+
+- Nombre (String)
+- CIF (String)
+- Fecha de fundación (Date)
+- Antigüedad (Integer AÑOS)[CALCULADO]
+- VIDEOJUEGOS --> UNO A MUCHOS 
+
+
+Videojuegos
+
+- Nombre (String)
+- Género (String)
+- Plataforma (String)
+- PrecioBase (Float)
+- Impuesto --> Many to one
+- Pvp (Float) [CALCULADO]
+- Existencias (Integer)
+- TIENDA --> (OneToOne)
+- DESARROLLADORA --> (ManyToOne)
+
+Impuesto
+
+- valor (Integer)
